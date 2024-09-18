@@ -2,7 +2,18 @@
 @import './utils/variables';
 @import "../../node_modules/bootstrap";
 
+
+// api
+@import "./utils/custom-api";
+@import "../../node_modules/bootstrap/scss/utilities/api";
+
+// utilities
+@import './utils/utilities';
+// components
+
+// layout
 @import './layout/header.scss';
 @import './layout/footer.scss';
 
+// pages
 @import './pages/index.scss';

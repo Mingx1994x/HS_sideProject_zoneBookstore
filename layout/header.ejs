@@ -1,4 +1,55 @@
-<h1 class="header">我是 header</h1>
-<a href="index.html">index</a>
-<a href="../pages/library.html">library</a>
-<a href="../pages/register.html">register</a>
+<div class="header">
+  <nav class="navbar navbar-expand-sm fixed-top" id="scrollFixNavbar">
+    <div class="container">
+      <h1 class="d-flex align-items-center">
+        <a class="navbar-brand py-0" href="./index.html"
+          ><img
+            src="../assets//images/logo.png"
+            style="height: 48px; width: 48px"
+            alt="Zone bookStore icon"
+          />
+          時空書店</a
+        >
+      </h1>
+      <button
+        class="navbar-toggler border-0"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#menuNav"
+        aria-controls="menuNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-top vh-100" id="menuNav">
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title" id="menuNavLabel">
+            <a class="navbar-brand" href="./index.html"
+              ><img
+                src="../assets//images/logo.png"
+                style="height: 48px; width: 48px"
+                alt="Zone bookStore icon"
+              />
+              時空書店</a
+            >
+          </h2>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <ul class="navbar-nav align-items-center ms-sm-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/library.html">藏書庫</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">登入/註冊</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

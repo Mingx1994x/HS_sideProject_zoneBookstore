@@ -1,4 +1,38 @@
 .header {
-  background: #69F0AE;
-  // font-size: 64px;
+  .navbar {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 16px 0;
+
+    @include media-breakpoint-down(sm) {
+      padding: 12px 0;
+    }
+  }
+
+  .navbar-brand {
+    color: $light;
+  }
+
+  .nav-link {
+    color: $light;
+
+    @include media-breakpoint-down(sm) {
+      color: $dark;
+    }
+  }
+
+}
+
+// navbar滑動後樣式
+.text-bg-transition-primary-100 {
+  background-color: $primary-100 !important;
+  transition: .5s;
+
+  a {
+    color: $dark !important;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='%23000000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+  }
+
 }
