@@ -296,6 +296,9 @@ $cyans: (
 // $dark: $gray-900 !default;
 $primary: #E0D6C8 !default;
 $primary-100: #F0ECE4 !default;
+$primary-200: #E0D6C8 !default;
+$primary-400: #B79C80 !default;
+$primary-900: #574137 !default;
 $secondary: #FE9D01 !default;
 $success: #0E874B !default;
 $info: #0095AB !default;
@@ -309,6 +312,9 @@ $light: $white !default;
 $theme-colors: (
   "primary": $primary,
   "primary-100": $primary-100,
+  "primary-200": $primary-200,
+  "primary-400": $primary-400,
+  "primary-900": $primary-900,
   "secondary": $secondary,
   "success": $success,
   "info": $info,
@@ -407,12 +413,37 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
+  // 4
   1: $spacer * .25,
+  // 8
   2: $spacer * .5,
+  // 16
   3: $spacer,
+  // 24
   4: $spacer * 1.5,
+  // 48
   5: $spacer * 3,
-  ) !default;
+  // custom
+  // 32
+  c4: $spacer * 2,
+  // 36
+  c4-lg: $spacer * 2.25,
+  // 40
+  c4-1: $spacer *2.5,
+  // 56
+  c5: $spacer * 3.5,
+  // 60
+  c5-lg: $spacer *3.75,
+  // 64
+  c5-1:$spacer *4,
+  // 72
+  6:$spacer *4.5,
+  // 80
+  c6:$spacer *5,
+  // 96
+  7:$spacer *6,
+  // 120
+  8:$spacer *7.5) !default;
 // scss-docs-end spacer-variables-maps
 
 // Position
@@ -541,11 +572,16 @@ $border-color-translucent: rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
+// 6
 $border-radius: .375rem !default;
 // custom
+// 8
 $border-radius-sm: .5rem !default;
+// 12
 $border-radius-lg: .75rem !default;
+// 16
 $border-radius-xl: 1rem !default;
+// 32
 $border-radius-xxl: 2rem !default;
 $border-radius-pill: 50rem !default;
 // scss-docs-end border-radius-variables
@@ -645,12 +681,21 @@ $line-height-base: 1.5 !default;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
+// 40
 $h1-font-size: $font-size-base * 2.5 !default;
+// 32
 $h2-font-size: $font-size-base * 2 !default;
+// 28
 $h3-font-size: $font-size-base * 1.75 !default;
+// 24
 $h4-font-size: $font-size-base * 1.5 !default;
+// 20
 $h5-font-size: $font-size-base * 1.25 !default;
+// 16
 $h6-font-size: $font-size-base !default;
+// custom
+// 18
+$t1-font-size: $font-size-base * 1.125 !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -660,7 +705,9 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size) !default;
+  6: $h6-font-size,
+  // custom
+  7: $t1-font-size) !default;
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
