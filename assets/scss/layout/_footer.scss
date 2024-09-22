@@ -1,4 +1,7 @@
 .footer {
-  background: #69F0AE;
-  // font-size: 64px;
+  background: $primary-100;
+
+  p {
+    text-align: center;
+  }
 }

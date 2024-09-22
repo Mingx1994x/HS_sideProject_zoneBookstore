@@ -17,7 +17,7 @@
 
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
         max-width: 375px;
 
         img {
@@ -45,7 +45,7 @@
         text-align: center;
         position: relative;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             font-size: $t1-font-size;
         }
 
@@ -60,7 +60,7 @@
             height: 80px;
             position: absolute;
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(lg) {
                 background-image: url(../images/decorate/quote-small.png);
                 width: 60px;
                 height: 60px;
@@ -72,7 +72,7 @@
             left: 0;
             transform: translateY(-50%);
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 transform: translate(32px, -30px);
             }
         }
@@ -82,13 +82,13 @@
             right: 0;
             transform: translateY(-58px) rotate(180deg);
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 transform: translate(-32px, -45px) rotate(180deg);
             }
         }
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
         width: 375px;
         padding: $spacer 0;
 
@@ -103,7 +103,7 @@
 .rightAngle-customBtn {
     padding: $spacer*.75 $spacer*2.25;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
         padding: $spacer*.5 $spacer*1.5;
 
     }
