@@ -4,11 +4,19 @@
 
 .section {
   background: $primary-100;
-  padding-top: $spacer *3.75;
-  padding-bottom: $spacer *3.75;
+  padding-top: map-get($map: $spacers, $key: c5-lg); //$spacer *3.75;
+  padding-bottom: map-get($map: $spacers, $key: c5-lg); //$spacer *3.75;
 
-  @include media-breakpoint-down(sm) {
-    padding-top: $spacer * 2.25;
-    padding-bottom: $spacer * 2.25;
+  @include media-breakpoint-down(md) {
+    padding-top: map-get($map: $spacers, $key: c4-lg); //$spacer * 2.25;
+    padding-bottom: map-get($map: $spacers, $key: c4-lg); //$spacer * 2.25;
+  }
+
+  h2 {
+    font-size: map-get($map: $display-font-sizes, $key: 5);
+
+    @include media-breakpoint-down(md) {
+      font-size: map-get($map: $font-sizes, $key: c2);
+    }
   }
 }

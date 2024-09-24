@@ -6,7 +6,7 @@
     box-shadow: 0px 4px 25px -1px #FFFFFF40;
     border-radius: $border-radius-sm;
     max-width: 344px;
-    padding: $spacer*1.5;
+    padding: map-get($spacers , 4);
     display: flex;
     flex-direction: column;
 
@@ -30,7 +30,7 @@
 
 .borderlessCard-transparent {
     width: 486px;
-    padding: $spacer*2;
+    padding: map-get($spacers , c4); //$spacer*2;
     display: flex;
     flex-direction: column;
 
@@ -90,7 +90,7 @@
 
     @include media-breakpoint-down(md) {
         width: 375px;
-        padding: $spacer 0;
+        padding: map-get($map: $spacers, $key: 3) 0;
 
         img {
             width: 200px;
@@ -98,14 +98,75 @@
     }
 }
 
+.borderlessCard-serial-transparent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .serialNumber {
+        font-size: map-get($display-font-sizes, 5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+
+        &::before {
+            content: '';
+            background: url('../images/decorate/sparkle.png');
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin-right: map-get($map: $spacers, $key: 1);
+        }
+
+        @include media-breakpoint-down(md) {
+            left: 16px;
+        }
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+    &>.cardBody {
+        padding: map-get($spacers, 3) map-get($spacers, 4);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardTitle {
+        font-size: $h2-font-size;
+        margin-bottom: map-get($spacers, 3);
+
+        @include media-breakpoint-down(lg) {
+            font-size: $h3-font-size;
+        }
+    }
+
+    .context {
+        font-weight: $font-weight-semibold;
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $h5-font-size;
+        }
+    }
+
+
+}
+
 
 // btn
 .rightAngle-customBtn {
-    padding: $spacer*.75 $spacer*2.25;
+    // padding: $spacer*.75 $spacer*2.25;
+    padding: map-get($spacers, c2-lg) map-get($spacers, c4-lg);
 
     @include media-breakpoint-down(md) {
-        padding: $spacer*.5 $spacer*1.5;
-
+        // padding: $spacer*.5 $spacer*1.5;
+        padding: map-get($spacers, 2) map-get($spacers, 4);
     }
 }
 

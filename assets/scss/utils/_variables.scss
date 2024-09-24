@@ -300,6 +300,7 @@ $primary-200: #E0D6C8 !default;
 $primary-400: #B79C80 !default;
 $primary-900: #574137 !default;
 $secondary: #FE9D01 !default;
+$secondary-300: #FEBA4D !default;
 $success: #0E874B !default;
 $info: #0095AB !default;
 $warning: #B89800 !default;
@@ -316,6 +317,7 @@ $theme-colors: (
   "primary-400": $primary-400,
   "primary-900": $primary-900,
   "secondary": $secondary,
+  "secondary-300": $secondary-300,
   "success": $success,
   "info": $info,
   "warning": $warning,
@@ -424,6 +426,8 @@ $spacers: (
   // 48
   5: $spacer * 3,
   // custom
+  // 12
+  c2-lg: $spacer * .75,
   // 32
   c4: $spacer * 2,
   // 36
@@ -696,6 +700,8 @@ $h6-font-size: $font-size-base !default;
 // custom
 // 18
 $t1-font-size: $font-size-base * 1.125 !default;
+//36
+$t2-font-size: $font-size-base * 2.25 !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -707,7 +713,9 @@ $font-sizes: (
   5: $h5-font-size,
   6: $h6-font-size,
   // custom
-  7: $t1-font-size) !default;
+  c1: $t1-font-size,
+  c2: $t2-font-size,
+  ) !default;
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
