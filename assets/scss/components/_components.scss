@@ -1,9 +1,34 @@
 // card
-.roundedCard-floatLight {
-    background: linear-gradient(104.36deg, rgba(255, 255, 255, 0.8) -0.49%, rgba(255, 255, 255, 0.6) 100%);
-    border: 1px solid;
-    border-image-source: linear-gradient(104.04deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 100%);
-    box-shadow: 0px 4px 25px -1px #FFFFFF40;
+// .roundedCard-floatLight {
+//     background: linear-gradient(104.36deg, rgba(255, 255, 255, 0.8) -0.49%, rgba(255, 255, 255, 0.6) 100%);
+//     border: 1px solid;
+//     border-image-source: linear-gradient(104.04deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 100%);
+//     box-shadow: 0px 4px 25px -1px #FFFFFF40;
+//     border-radius: $border-radius-sm;
+//     max-width: 344px;
+//     padding: map-get($spacers , 4);
+//     display: flex;
+//     flex-direction: column;
+
+//     img {
+//         width: 300px;
+//         // height: 300px;
+//         align-self: center;
+
+//     }
+
+//     @include media-breakpoint-down(md) {
+//         max-width: 375px;
+
+//         img {
+//             width: 200px;
+//             // height: 200px;
+//         }
+//     }
+// }
+
+// card
+.roundedCard {
     border-radius: $border-radius-sm;
     max-width: 344px;
     padding: map-get($spacers , 4);
@@ -27,8 +52,53 @@
     }
 }
 
+.rounded-titleCard {
+    border-radius: $border-radius-lg;
+    display: flex;
+    flex-direction: column;
 
-.borderlessCard-transparent {
+    &.rounded-titleCard-lg {
+        padding: map-get($map: $spacers, $key: 2);
+        row-gap: map-get($map: $spacers, $key: 3);
+
+        .bookTitle {
+            margin-bottom: map-get($spacers, 3);
+        }
+    }
+
+    &.rounded-titleCard-sm {
+        padding: map-get($map: $spacers, $key: 1);
+        row-gap: map-get($map: $spacers, $key: 2);
+
+        .bookTitle {
+            margin-bottom: map-get($spacers, 2);
+        }
+    }
+
+    .bookTitle {
+        font-size: map-get($font-sizes , 5);
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+// card-bg
+.card-bg-neutral-translucent {
+    background: linear-gradient(104.36deg, rgba(255, 255, 255, 0.8) -0.49%, rgba(255, 255, 255, 0.6) 100%);
+    border: 1px solid;
+    border-image-source: linear-gradient(104.04deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 100%);
+    box-shadow: 0px 4px 25px -1px #FFFFFF40;
+}
+
+.card-bg-neutral {
+    background: linear-gradient(103.55deg, rgba(255, 255, 255, 0.8) 0.31%, rgba(255, 255, 255, 0.6) 99.95%);
+    border: 1px solid;
+    border-image-source: linear-gradient(104.04deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 100%);
+    box-shadow: 0px 4px 25px -1px #FFFFFF40;
+    backdrop-filter: blur(40px);
+}
+
+.transparentCard {
     width: 486px;
     padding: map-get($spacers , c4); //$spacer*2;
     display: flex;
@@ -98,7 +168,7 @@
     }
 }
 
-.borderlessCard-serial-transparent {
+.transparentCard-serial {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,11 +228,13 @@
 
 }
 
-
 // btn
-.rightAngle-customBtn {
+.rightAngleBtn {
     // padding: $spacer*.75 $spacer*2.25;
     padding: map-get($spacers, c2-lg) map-get($spacers, c4-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include media-breakpoint-down(md) {
         // padding: $spacer*.5 $spacer*1.5;
@@ -170,7 +242,20 @@
     }
 }
 
-.customBtn-primary {
+.roundedBtn {
+    border-radius: $border-radius-sm;
+    padding: map-get($spacers, c2-lg) map-get($spacers, c4-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+        // padding: $spacer*.5 $spacer*1.5;
+        padding: map-get($spacers, 2) map-get($spacers, 4);
+    }
+}
+
+.customBtn-primary-200 {
     color: $primary-900;
     background: $primary-200;
 

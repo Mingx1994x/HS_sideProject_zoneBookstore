@@ -307,6 +307,7 @@ $warning: #B89800 !default;
 $danger: #B71E2C !default;
 $dark: $black !default;
 $light: $white !default;
+$neutral: #7C7C7C !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -323,7 +324,8 @@ $theme-colors: (
   "warning": $warning,
   "danger": $danger,
   "light": $light,
-  "dark": $dark) !default;
+  "dark": $dark,
+  "neutral": $neutral ) !default;
 // scss-docs-end theme-colors-map
 
 // scss-docs-start theme-text-variables
