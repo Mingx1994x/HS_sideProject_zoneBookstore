@@ -8,7 +8,74 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <h1>我是register</h1>
+    <div
+      class="wrapper bg-cover d-flex flex-column justify-content-center"
+      style="background-image: url('../assets/images/banner.png'); height: 100vh;"
+    >
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-6">
+            <form class="roundedWrapper bg-neutral-translucent">
+              <div class="mb-4">
+                <label for="userID" class="form-label mb-1">userID</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userID"
+                  placeholder="請輸入使用者ID"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="userEmail" class="form-label mb-1">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="userEmail"
+                  placeholder="請輸入信箱"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="userPhone" class="form-label mb-1">Phone</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userPhone"
+                  placeholder="請輸入聯絡電話"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="userPassword" class="form-label mb-1"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="userPassword"
+                  placeholder="請輸入密碼"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="chkPassword" class="form-label mb-1"
+                  >Password Confirm</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="chkPassword"
+                  placeholder="請再次輸入密碼"
+                />
+              </div>
+              <button
+                type="button"
+                class="roundedBtn customBtn-primary-200 align-self-center"
+              >
+                註冊
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
