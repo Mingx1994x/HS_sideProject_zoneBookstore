@@ -7,7 +7,7 @@
     <title>index</title>
   </head>
   <body>
-    <div class="container"><%- include('./layout/header'); -%></div>
+    <%- include('./layout/header'); -%>
     <div
       class="banner bg-cover d-flex justify-content-center align-items-center py-5"
       style="background-image: url('../assets/images/banner.png')"
@@ -24,7 +24,7 @@
           <h2 class="text-light text-center">想要點些什麼呢？</h2>
         </div>
         <div class="d-flex flex-column flex-md-row gap-c4 gap-md-c4-1">
-          <div class="roundedCard-floatLight">
+          <div class="roundedCard card-bg-neutral-translucent">
             <img
               src="../assets/images/drawing/delivery.png"
               alt=""
@@ -32,11 +32,11 @@
             />
             <a
               href="#"
-              class="rightAngle-customBtn customBtn-primary left-bottom-borderBtn-primary d-flex justify-content-center"
+              class="rightAngleBtn customBtn-primary-200 left-bottom-borderBtn-primary"
               >想捐書
             </a>
           </div>
-          <div class="roundedCard-floatLight">
+          <div class="roundedCard card-bg-neutral-translucent">
             <img
               src="../assets/images/drawing/find.png"
               alt="find"
@@ -44,7 +44,7 @@
             />
             <a
               href="#"
-              class="rightAngle-customBtn customBtn-primary left-bottom-borderBtn-primary d-flex justify-content-center"
+              class="rightAngleBtn customBtn-primary-200 left-bottom-borderBtn-primary"
               >想找書
             </a>
           </div>
@@ -54,11 +54,13 @@
     <!-- question -->
     <section class="section">
       <div class="container">
-        <h2 class="text-center mb-3 mb-md-c4">你有相同的困擾嗎？</h2>
+        <h2 class="sectionTitle text-center mb-3 mb-md-c4">
+          你有相同的困擾嗎？
+        </h2>
         <div class="row mb-3 mb-md-c4">
           <div class="col-md-6">
             <div class="d-flex justify-content-center">
-              <div class="borderlessCard-transparent">
+              <div class="transparentCard">
                 <img
                   src="../assets/images/drawing/house.png"
                   alt="find"
@@ -74,7 +76,7 @@
           </div>
           <div class="col-md-6">
             <div class="d-flex justify-content-center">
-              <div class="borderlessCard-transparent">
+              <div class="transparentCard">
                 <img
                   src="../assets/images/drawing/coin.png"
                   alt="find"
@@ -92,73 +94,80 @@
         <div class="d-flex">
           <a
             href="#"
-            class="rightAngle-customBtn customBtn-primary left-bottom-borderBtn-primary  mx-auto"
+            class="rightAngleBtn customBtn-primary-200 left-bottom-borderBtn-primary  mx-auto"
             >前往交換
           </a>
         </div>
       </div>
     </section>
-    <div class="bg-linear-primary bg-cover py-8">
-      <div class="container">
-        <!-- swiper -->
-        <div class="swiper centeredSwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img
-                src="../assets/images/activity-1.png"
-                alt=""
-                class="img-fluid"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="../assets/images/activity-2.png"
-                alt=""
-                class="img-fluid"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="../assets/images/activity-3.png"
-                alt=""
-                class="img-fluid"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="../assets/images/activity-1.png"
-                alt=""
-                class="img-fluid"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="../assets/images/activity-2.png"
-                alt=""
-                class="img-fluid"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="../assets/images/activity-3.png"
-                alt=""
-                class="img-fluid"
-              />
-            </div>
+
+    <!-- activity -->
+    <div class="bg-linear-primary py-c4-lg py-lg-8">
+      <!-- swiper -->
+      <div class="swiper centeredSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="../assets/images/activity-1.png"
+              alt=""
+              class="img-fluid rounded-2"
+            />
           </div>
-          <!-- navigation -->
-          <div class="centeredSwiper-prev square-rounded-prev"></div>
-          <div class="centeredSwiper-next square-rounded-next"></div>
+          <div class="swiper-slide">
+            <img
+              src="../assets/images/activity-2.png"
+              alt=""
+              class="img-fluid rounded-2"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../assets/images/activity-3.png"
+              alt=""
+              class="img-fluid rounded-2"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../assets/images/activity-1.png"
+              alt=""
+              class="img-fluid rounded-2"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../assets/images/activity-2.png"
+              alt=""
+              class="img-fluid rounded-2"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../assets/images/activity-3.png"
+              alt=""
+              class="img-fluid rounded-2"
+            />
+          </div>
+        </div>
+        <!-- navigation -->
+        <div class="centeredSwiper-prev circleBtn circleBtn-light">
+          <span class="mgc_left_fill d-none d-md-block"></span>
+          <span class="mgc_left_small_line d-md-none"></span>
+        </div>
+        <div class="centeredSwiper-next circleBtn circleBtn-light">
+          <span class="mgc_right_fill d-none d-md-block"></span>
+          <span class="mgc_right_small_line d-md-none"></span>
         </div>
       </div>
     </div>
 
+    <!-- about -->
     <section class="section">
       <div class="container">
-        <h2 class="text-center mb-3 mb-md-c4">關於時空書屋</h2>
+        <h2 class="sectionTitle text-center mb-3 mb-md-c4">關於時空書屋</h2>
         <ol class="row list-unstyled g-4 mb-0">
           <li class="col-md-4">
-            <div class="borderlessCard-serial-transparent">
+            <div class="transparentCard-serial">
               <h3 class="serialNumber text-secondary-300">01</h3>
               <img
                 src="../assets/images/drawing/book.png"
@@ -178,7 +187,7 @@
             </div>
           </li>
           <li class="col-md-4">
-            <div class="borderlessCard-serial-transparent">
+            <div class="transparentCard-serial">
               <h3 class="serialNumber text-secondary-300">02</h3>
               <img
                 src="../assets/images/drawing/cat.png"
@@ -195,14 +204,16 @@
               </div>
               <button
                 type="button"
-                class="rightAngle-customBtn customBtn-primary border-0 mt-2"
+                class="rightAngleBtn customBtn-primary-200 border-0 mt-2"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
               >
                 挑戰店長的謎語
               </button>
             </div>
           </li>
           <li class="col-md-4">
-            <div class="borderlessCard-serial-transparent">
+            <div class="transparentCard-serial">
               <h3 class="serialNumber text-secondary-300">03</h3>
               <img
                 src="../assets/images/drawing/book.png"
@@ -224,16 +235,236 @@
       </div>
     </section>
 
-    <!-- Modal 按鈕 -->
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      打開 modal
-    </button>
+    <!-- recommend -->
+    <section class="section bg-linear-primary">
+      <div class="container">
+        <div class="py-4 py-md-0 mb-3 mb-md-5">
+          <div
+            class="d-flex justify-content-between justify-content-md-center align-items-center mb-3 mb-md-c4"
+          >
+            <h3 class="sectionTitle text-light mx-md-auto">時空店長推薦</h3>
+            <a href="#" class="linkMore">查看更多</a>
+          </div>
+          <div class="row gy-4 d-none d-md-flex">
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="rounded-titleCard rounded-titleCard-lg card-bg-neutral"
+              >
+                <img
+                  src="../assets/images/drawing/cat.png"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="d-flex flex-column">
+                  <h4 class="bookTitle">航海王 vol.58</h4>
+                  <a href="#" class="roundedBtn customBtn-primary-200"
+                    >了解更多</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="rounded-titleCard rounded-titleCard-lg card-bg-neutral"
+              >
+                <img
+                  src="../assets/images/drawing/cat.png"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="d-flex flex-column">
+                  <h4 class="bookTitle">航海王 vol.58</h4>
+                  <a href="#" class="roundedBtn customBtn-primary-200"
+                    >了解更多</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="rounded-titleCard rounded-titleCard-lg card-bg-neutral"
+              >
+                <img
+                  src="../assets/images/drawing/cat.png"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="d-flex flex-column">
+                  <h4 class="bookTitle">航海王 vol.58</h4>
+                  <a href="#" class="roundedBtn customBtn-primary-200"
+                    >了解更多</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="rounded-titleCard rounded-titleCard-lg card-bg-neutral"
+              >
+                <img
+                  src="../assets/images/drawing/cat.png"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="d-flex flex-column">
+                  <h4 class="bookTitle">航海王 vol.58</h4>
+                  <a href="#" class="roundedBtn customBtn-primary-200"
+                    >了解更多</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="py-4 py-md-0 mb-3 mb-md-5">
+          <div
+            class="d-flex justify-content-between justify-content-md-center align-items-center mb-3 mb-md-c4"
+          >
+            <h3 class="sectionTitle text-light mx-md-auto">近期上架</h3>
+            <a href="#" class="linkMore">查看更多</a>
+          </div>
+          <div class="row gy-4 d-none d-md-flex">
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="rounded-titleCard rounded-titleCard-lg card-bg-neutral"
+              >
+                <img
+                  src="../assets/images/drawing/cat.png"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="d-flex flex-column">
+                  <h4 class="bookTitle">獄中情人</h4>
+                  <a href="#" class="roundedBtn customBtn-primary-200"
+                    >了解更多</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="rounded-titleCard rounded-titleCard-lg card-bg-neutral"
+              >
+                <img
+                  src="../assets/images/drawing/cat.png"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="d-flex flex-column">
+                  <h4 class="bookTitle">航海王 vol.58</h4>
+                  <a href="#" class="roundedBtn customBtn-primary-200"
+                    >了解更多</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="rounded-titleCard rounded-titleCard-lg card-bg-neutral"
+              >
+                <img
+                  src="../assets/images/drawing/cat.png"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="d-flex flex-column">
+                  <h4 class="bookTitle">航海王 vol.58</h4>
+                  <a href="#" class="roundedBtn customBtn-primary-200"
+                    >了解更多</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="rounded-titleCard rounded-titleCard-lg card-bg-neutral"
+              >
+                <img
+                  src="../assets/images/drawing/cat.png"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="d-flex flex-column">
+                  <h4 class="bookTitle">航海王 vol.58</h4>
+                  <a href="#" class="roundedBtn customBtn-primary-200"
+                    >了解更多</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- exchange -->
+    <section class="section">
+      <div class="container">
+        <h2 class="sectionTitle text-center mb-3 mb-md-c4">我要如何換書呢？</h2>
+        <div class="row row-gap-c6 d-flex align-items-center">
+          <div class="col-lg-4">
+            <div class="step1 pe-lg-5">
+              <div class="d-flex flex-column align-items-center p-3 gap-2">
+                <p class="fs-c1 fs-md-4 fw-semibold">步驟 1</p>
+                <img
+                  src="../assets/images/drawing/member.png"
+                  alt="member"
+                  style="height: 150px; width: 150px;"
+                />
+                <a
+                  href="#"
+                  class="rightAngleBtn customBtn-primary-200 left-bottom-borderBtn-primary align-self-stretch"
+                  >加入會員
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="step2 px-lg-4">
+              <div class="d-flex flex-column align-items-center p-3 gap-2">
+                <p class="fs-c1 fs-md-4 fw-semibold">步驟 2</p>
+                <div class="py-2 d-flex flex-column">
+                  <img
+                    src="../assets/images/drawing/reading-2.png"
+                    alt="reading"
+                    style="height: 150px; width: 150px;"
+                    class="mx-auto"
+                  />
+                  <p class="fs-lg-5 fw-semibold">1.上架舊書換取點數</p>
+                </div>
+                <p class="text-neutral small fs-md-6 fw-semibold ">或是</p>
+                <div class="py-2 d-flex flex-column">
+                  <img
+                    src="../assets/images/drawing/gift.png"
+                    alt="gift"
+                    style="height: 150px; width: 150px;"
+                    class="mx-auto"
+                  />
+                  <p class="fs-lg-5 fw-semibold">2.捐書給時空換取點數</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="step3 ps-lg-5">
+              <div class="d-flex flex-column align-items-center p-3 gap-2">
+                <p class="fs-c1 fs-md-4 fw-semibold">步驟 3</p>
+                <img
+                  src="../assets/images/drawing/reading-2.png"
+                  alt="reading"
+                  style="height: 150px; width: 150px;"
+                />
+                <a
+                  href="#"
+                  class="rightAngleBtn customBtn-primary-200 left-bottom-borderBtn-primary align-self-stretch"
+                  >前往書庫
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Modal 元件 -->
     <div
       class="modal fade"

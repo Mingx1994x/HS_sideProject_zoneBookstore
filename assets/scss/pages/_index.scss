@@ -3,7 +3,6 @@
 }
 
 .section {
-  background: $primary-100;
   padding-top: map-get($map: $spacers, $key: c5-lg); //$spacer *3.75;
   padding-bottom: map-get($map: $spacers, $key: c5-lg); //$spacer *3.75;
 
@@ -12,11 +11,26 @@
     padding-bottom: map-get($map: $spacers, $key: c4-lg); //$spacer * 2.25;
   }
 
-  h2 {
+  h2.sectionTitle {
     font-size: map-get($map: $display-font-sizes, $key: 5);
 
     @include media-breakpoint-down(md) {
       font-size: map-get($map: $font-sizes, $key: c2);
     }
+  }
+
+  h3.sectionTitle {
+    padding: 3px 0;
+
+    @include media-breakpoint-up(md) {
+      padding-top: map-get($map: $spacers, $key: 2);
+      padding-bottom: map-get($map: $spacers, $key: 2);
+      padding-left: map-get($map: $spacers, $key: c5-lg);
+      font-size: map-get($map: $font-sizes, $key: 1);
+    }
+  }
+
+  .linkMore {
+    color: $light;
   }
 }
