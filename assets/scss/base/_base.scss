@@ -5,3 +5,16 @@ body {
 a {
     text-decoration: none;
 }
+
+i.bi {
+    font-size: map-get($font-sizes, 4);
+    line-height: 1;
+}
+
+span[class^='mgc_'] {
+    font-size: map-get($font-sizes, 4);
+
+    &::before {
+        color: inherit;
+    }
+}

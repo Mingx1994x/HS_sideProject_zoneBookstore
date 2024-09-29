@@ -307,7 +307,9 @@ $warning: #B89800 !default;
 $danger: #B71E2C !default;
 $dark: $black !default;
 $light: $white !default;
+// neutral-500
 $neutral: #7C7C7C !default;
+$neutral-600: #656565 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -325,7 +327,9 @@ $theme-colors: (
   "danger": $danger,
   "light": $light,
   "dark": $dark,
-  "neutral": $neutral ) !default;
+  "neutral": $neutral,
+  "neutral-600": $neutral-600,
+  ) !default;
 // scss-docs-end theme-colors-map
 
 // scss-docs-start theme-text-variables
@@ -428,6 +432,8 @@ $spacers: (
   // 48
   5: $spacer * 3,
   // custom
+  // 6
+  c1-lg: $spacer * .375,
   // 12
   c2-lg: $spacer * .75,
   // 32
