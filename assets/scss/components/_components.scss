@@ -274,9 +274,15 @@
 .customBtn-primary-200 {
     color: $primary-900;
     background: $primary-200;
+    border: none;
 
     &:hover {
         background: $primary-400;
+    }
+
+    &.active {
+        color: $dark;
+        background: $secondary;
     }
 }
 
