@@ -8,7 +8,125 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <h1>我是books</h1>
+    <section class="section mt-c6">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10 col-lg-8">
+            <h2 class="sectionTitle mb-3 mb-md-c4">上架資訊</h2>
+            <div class="row mb-3 mb-md-c4">
+              <div class="col-md-6">
+                <div class="d-flex justify-content-center">
+                  <div
+                    class="rounded-titleCard rounded-titleCard-lg card-bg-neutral"
+                  >
+                    <img
+                      src="../assets/images/drawing/cat.png"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex flex-column align-items-start">
+                  <h3>書名：書劍恩仇錄(vol.4)</h3>
+                  <ul class="list-unstyled books-info">
+                    <li>出版社：遠流</li>
+                    <li>作者：金庸</li>
+                    <li>分類：</li>
+                    <li>書況：7成新</li>
+                    <li>交換點數：30</li>
+                    <li>關注度：12</li>
+                    <li>上架日期：2024/7/30</li>
+                    <li>上架方式：時空書店上架</li>
+                    <li>推薦指數：</li>
+                  </ul>
+                  <div class="d-flex">
+                    <button
+                      class="roundedBtn customBtn-primary-200 active me-3"
+                      type="button"
+                    >
+                      我有興趣
+                    </button>
+                    <button
+                      class="roundedBtn customBtn-primary-200 active me-3"
+                      type="button"
+                    >
+                      換書
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="my-c4" />
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10 col-lg-8">
+            <h2 class="sectionTitle mb-3 mb-md-c4">推薦文</h2>
+            <div class="context px-3">
+              <p>
+                《書劍恩仇錄》是金庸的經典武俠小說,故事背景設在清朝乾隆年間,歷史與虛構相結合,情節曲折動人,人物形象栩栩如生,有江湖兒女的豪情壯志,也有熱血豪傑殺進皇宮的快意恩仇,整部小說情節跌宕起伏,不僅展現了俠義精神,也深入探討了忠誠、友情和愛情的複雜性,推薦給想回味武俠小說的朋友們。
+              </p>
+            </div>
+            <hr class="my-c4" />
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10 col-lg-8">
+            <h2 class="sectionTitle mb-3 mb-md-c4">留言區</h2>
+            <div class="context p-4">
+              <div class="d-flex mb-3">
+                <div class="flex-shrink-0">
+                  <img
+                    src="../assets/images/drawing/cat.png"
+                    alt="..."
+                    class=" rounded-circle object-fit-cover"
+                    style="height: 40px; width: 40px;"
+                  />
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <p>唐門小廝</p>
+                  <p>請問哪裡可以學千臂如來的獨門暗器</p>
+                  <p>2024-08-01</p>
+                </div>
+              </div>
+              <div class="d-flex mb-3">
+                <div class="flex-shrink-0">
+                  <img
+                    src="../assets/images/drawing/cat.png"
+                    alt="..."
+                    class=" rounded-circle object-fit-cover"
+                    style="height: 40px; width: 40px;"
+                  />
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <p>kkkkkkkk</p>
+                  <p>店長表示：都在書裡了，自己去尋找吧。</p>
+                  <p>2024-08-12</p>
+                </div>
+              </div>
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control bg-transparent"
+                  placeholder="我也想說..."
+                  aria-label="我也想說..."
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  class="btn btn-outline-secondary border-0"
+                  type="button"
+                  id="button-addon2"
+                >
+                  <i class="bi bi-send-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>

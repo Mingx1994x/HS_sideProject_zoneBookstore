@@ -251,7 +251,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: map-get($font-sizes, 5);
 
+    // img[src*=".svg"] {
+    //     display: block;
+    //     height: 16px;
+    //     width: 16px;
+    //     margin-left: map-get($spacers, 1);
+    // }
     @include media-breakpoint-down(md) {
         // padding: $spacer*.5 $spacer*1.5;
         padding: map-get($spacers, 2) map-get($spacers, 4);
