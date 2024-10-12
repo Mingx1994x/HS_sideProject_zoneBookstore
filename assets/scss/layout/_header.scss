@@ -16,6 +16,10 @@
     color: $light;
     font-size: map-get($font-sizes, 5);
 
+    &:hover {
+      color: $secondary;
+    }
+
     @include media-breakpoint-down(sm) {
       font-size: map-get($font-sizes, 6);
       color: $dark;

@@ -32,5 +32,9 @@
 
   .linkMore {
     color: $light;
+
+    &:hover {
+      color: $secondary;
+    }
   }
 }
