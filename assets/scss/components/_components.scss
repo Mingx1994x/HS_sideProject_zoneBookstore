@@ -32,7 +32,19 @@
     padding: map-get($spacers, 4);
     display: flex;
     flex-direction: column;
+
     // gap: map-get($spacers, 3);
+    &.roundedBadge {
+        font-weight: $font-weight-semibold;
+        font-size: map-get($font-sizes, 5);
+        text-align: center;
+        width: 500px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: map-get($font-sizes, c0);
+            width: 279px;
+        }
+    }
 }
 
 .bg-neutral-translucent {
@@ -72,6 +84,37 @@
     border-radius: $border-radius-lg;
     display: flex;
     flex-direction: column;
+    position: relative;
+
+    .heart-btn {
+        padding: map-get($spacers, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: map-get($spacers, 4);
+        right: map-get($spacers, 4);
+
+        i.bi {
+            color: $light;
+            font-size: map-get($font-sizes, 5);
+            font-weight: $font-weight-bold !important;
+        }
+
+        &:hover,
+        &.active {
+            i.bi {
+                color: $secondary;
+            }
+        }
+
+
+
+        @include media-breakpoint-down(sm) {
+            top: map-get($spacers, 3);
+            right: map-get($spacers, 3);
+        }
+    }
 
     &.rounded-titleCard-lg {
         padding: map-get($map: $spacers, $key: 2);
@@ -259,6 +302,10 @@
     //     width: 16px;
     //     margin-left: map-get($spacers, 1);
     // }
+    svg {
+        margin-left: map-get($spacers, 2);
+    }
+
     @include media-breakpoint-down(md) {
         // padding: $spacer*.5 $spacer*1.5;
         padding: map-get($spacers, 2) map-get($spacers, 4);
@@ -357,7 +404,36 @@
     box-shadow: 4px 4px 10px 0px #00000014;
 
     &:hover {
-        color: $dark;
-        background: #46464640;
+        color: $primary-900;
+        // background: #46464640;
+        background-color: $primary-200;
+    }
+
+    &:active {
+        color: $light;
+        background-color: $primary-400;
+    }
+}
+
+// pagination樣式
+.pill-rounded-pagination {
+    text-align: center;
+    opacity: 1;
+
+    // background: rgba(0, 0, 0, 0.2);
+    .swiper-pagination-bullet {
+        width: 24px;
+        border-radius: 100px;
+        background: $secondary;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $primary;
+    }
+}
+
+.cardSwiper-pagination {
+    &.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: auto;
     }
 }
