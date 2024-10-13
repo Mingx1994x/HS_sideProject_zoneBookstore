@@ -1,0 +1,32 @@
+.loginPort {
+    // min-height: 500px;
+
+    // .tab-content {
+    //     display: flex;
+    //     flex-direction: column;
+    //     height: 100%;
+    // }
+
+    .tab-pane {
+        min-height: 380px;
+    }
+}
+
+.tabUnderline {
+    display: flex;
+    flex-wrap: nowrap;
+
+    .nav-item {
+        width: 50%;
+    }
+
+    .nav-link {
+        color: $primary-400;
+        text-align: center;
+
+        &:hover {
+            color: $primary-900;
+        }
+
+    }
+}

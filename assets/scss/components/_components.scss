@@ -340,6 +340,17 @@
     }
 }
 
+.customBtn-secondary-300 {
+    color: $dark;
+    background: $secondary-300;
+    border: none;
+
+    &:hover {
+        background: $secondary;
+    }
+
+}
+
 .left-bottom-borderBtn-primary {
     border-width: 0 0 2px 2px;
     border-style: solid;

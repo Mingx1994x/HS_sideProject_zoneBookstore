@@ -15,62 +15,124 @@
       <div class="container">
         <div class="row d-flex justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-6">
-            <form class="roundedWrapper bg-neutral-translucent">
-              <div class="mb-4">
-                <label for="userID" class="form-label mb-1">userID</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="userID"
-                  placeholder="請輸入使用者ID"
-                />
-              </div>
-              <div class="mb-4">
-                <label for="userEmail" class="form-label mb-1">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="userEmail"
-                  placeholder="請輸入信箱"
-                />
-              </div>
-              <div class="mb-4">
-                <label for="userPhone" class="form-label mb-1">Phone</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="userPhone"
-                  placeholder="請輸入聯絡電話"
-                />
-              </div>
-              <div class="mb-4">
-                <label for="userPassword" class="form-label mb-1"
-                  >Password</label
+            <form class="loginPort roundedWrapper bg-neutral-translucent">
+              <ul class="tabUnderline nav nav-underline mb-c4">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    href="#loginPanel"
+                    data-bs-toggle="tab"
+                    >登入</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#registerPanel" data-bs-toggle="tab"
+                    >註冊</a
+                  >
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div
+                  class="tab-pane fade show active"
+                  id="loginPanel"
+                  role="tabpanel"
+                  aria-labelledby="login-tab"
+                  tabindex="0"
                 >
-                <input
-                  type="password"
-                  class="form-control"
-                  id="userPassword"
-                  placeholder="請輸入密碼"
-                />
-              </div>
-              <div class="mb-4">
-                <label for="chkPassword" class="form-label mb-1"
-                  >Password Confirm</label
+                  <div class="d-flex flex-column justify-content-between h-100">
+                    <div class="mb-3">
+                      <label for="memberEmail" class="form-label mb-1"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="memberEmail"
+                        placeholder="請輸入信箱"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="memberPassword" class="form-label mb-1"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="memberPassword"
+                        placeholder="請輸入密碼"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      class="roundedBtn customBtn-secondary-300 align-self-center mt-auto"
+                      id="loginBtn"
+                    >
+                      登入
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="registerPanel"
+                  role="tabpanel"
+                  aria-labelledby="register-tab"
+                  tabindex="0"
                 >
-                <input
-                  type="password"
-                  class="form-control"
-                  id="chkPassword"
-                  placeholder="請再次輸入密碼"
-                />
+                  <div class="d-flex flex-column">
+                    <div class="mb-3">
+                      <label for="userNickname" class="form-label mb-1"
+                        >Nickname</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="userNickname"
+                        placeholder="請輸入暱稱"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="userEmail" class="form-label mb-1"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="userEmail"
+                        placeholder="請輸入信箱"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="userPassword" class="form-label mb-1"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="userPassword"
+                        placeholder="請輸入密碼"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="chkPassword" class="form-label mb-1"
+                        >Password Confirm</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="chkPassword"
+                        placeholder="請再次輸入密碼"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      class="roundedBtn customBtn-secondary-300 align-self-center"
+                      id="registerBtn"
+                    >
+                      註冊
+                    </button>
+                  </div>
+                </div>
               </div>
-              <button
-                type="button"
-                class="roundedBtn customBtn-primary-200 align-self-center"
-              >
-                註冊
-              </button>
             </form>
           </div>
         </div>
@@ -79,5 +141,6 @@
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
+    <script type="module" src="../assets/js/login.js"></script>
   </body>
 </html>
