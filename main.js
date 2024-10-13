@@ -8,7 +8,12 @@ import 'mingcute_icon/font/Mingcute.css'
 //swiper
 import './assets/js/swiper';
 
+
+
 // script
+import './assets/js/statusCheck';
 import './assets/js/navbar';
 
-console.log("Hello world!");
+
+
+// console.log("Hello world!");
