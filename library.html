@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>library</title>
-    <script type="module" crossorigin src="/HS_sideProject_zoneBookstore/assets/main-2bd40742.js"></script>
-    <link rel="stylesheet" href="/HS_sideProject_zoneBookstore/assets/main-4a10ed68.css">
+    <script type="module" crossorigin src="/HS_sideProject_zoneBookstore/assets/main-6eeb37e6.js"></script>
+    <link rel="stylesheet" href="/HS_sideProject_zoneBookstore/assets/main-61a430f4.css">
   </head>
   <body>
     <div class="bg-linear-primary" style="height: 80px;">
@@ -62,11 +62,16 @@
                 ><i class="bi bi-bookmark me-1"></i>藏書庫</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="memberLogin">
               <a
                 class="nav-link d-flex align-items-center"
                 href="./register.html"
                 ><i class="bi bi-person me-1"></i>登入/註冊</a
+              >
+            </li>
+            <li class="nav-item d-none" id="memberArea">
+              <a class="nav-link d-flex align-items-center" href="./member.html"
+                ><i class="bi bi-person me-1"></i>會員專區</a
               >
             </li>
           </ul>
@@ -122,9 +127,19 @@
     </section>
     <section class="section bg-linear-primary">
       <div class="container">
-        <h2 class="sectionTitle text-center mb-3 mb-md-c4">店內收藏</h2>
-        <div class="row gy-4 d-none d-md-flex">
-          <!-- <div class="col-lg-2 col-md-4">
+        <div class="d-flex justify-content-between mb-3 mb-md-c4">
+          <div class="flex-shrink-0">
+            <h2 class="sectionTitle text-light">近期推薦</h2>
+          </div>
+          <div
+            class="flex-grow-1 d-flex justify-content-end align-items-center"
+          >
+            <div class="cardSwiper-pagination pill-rounded-pagination"></div>
+          </div>
+        </div>
+        <!-- <div class="row gy-4">
+          
+          <div class="col-lg-2 col-md-4">
             <div class="rounded-titleCard rounded-titleCard-lg card-bg-neutral">
               <img
                 src="../assets/images/drawing/cat.png"
@@ -148,11 +163,11 @@
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
           <div class="col-lg-2 col-md-4">
             <div class="rounded-titleCard rounded-titleCard-lg card-bg-neutral">
               <img
-                src="/HS_sideProject_zoneBookstore/assets/cat-c770c2be.png"
+                src="../assets/images/drawing/cat.png"
                 alt=""
                 class="img-fluid"
               />
@@ -170,7 +185,7 @@
           <div class="col-lg-2 col-md-4">
             <div class="rounded-titleCard rounded-titleCard-lg card-bg-neutral">
               <img
-                src="/HS_sideProject_zoneBookstore/assets/cat-c770c2be.png"
+                src="../assets/images/drawing/cat.png"
                 alt=""
                 class="img-fluid"
               />
@@ -185,7 +200,7 @@
           <div class="col-lg-2 col-md-4">
             <div class="rounded-titleCard rounded-titleCard-lg card-bg-neutral">
               <img
-                src="/HS_sideProject_zoneBookstore/assets/cat-c770c2be.png"
+                src="../assets/images/drawing/cat.png"
                 alt=""
                 class="img-fluid"
               />
@@ -200,7 +215,7 @@
           <div class="col-lg-2 col-md-4">
             <div class="rounded-titleCard rounded-titleCard-lg card-bg-neutral">
               <img
-                src="/HS_sideProject_zoneBookstore/assets/cat-c770c2be.png"
+                src="../assets/images/drawing/cat.png"
                 alt=""
                 class="img-fluid"
               />
@@ -212,18 +227,107 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4">
-            <div class="rounded-titleCard rounded-titleCard-lg card-bg-neutral">
-              <img
-                src="/HS_sideProject_zoneBookstore/assets/cat-c770c2be.png"
-                alt=""
-                class="img-fluid"
-              />
-              <div class="d-flex flex-column">
-                <h4 class="bookTitle">航海王 vol.58</h4>
-                <a href="#" class="roundedBtn customBtn-primary-200"
-                  >了解更多</a
-                >
+        </div> -->
+        <div class="swiper cardSwiper-1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="rounded-titleCard rounded-titleCard-lg card-bg-neutral"
+              >
+                <a href="#" class="heart-btn">
+                  <i class="bi bi-heart"></i>
+                </a>
+                <img
+                  src="/HS_sideProject_zoneBookstore/assets/cat-c770c2be.png"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="d-flex flex-column">
+                  <h4 class="bookTitle">航海王 vol.58</h4>
+                  <a href="#" class="roundedBtn customBtn-primary-200"
+                    >了解更多</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="rounded-titleCard rounded-titleCard-lg card-bg-neutral"
+              >
+                <a href="#" class="heart-btn">
+                  <i class="bi bi-heart"></i>
+                </a>
+                <img
+                  src="/HS_sideProject_zoneBookstore/assets/cat-c770c2be.png"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="d-flex flex-column">
+                  <h4 class="bookTitle">航海王 vol.58</h4>
+                  <a href="#" class="roundedBtn customBtn-primary-200"
+                    >了解更多</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="rounded-titleCard rounded-titleCard-lg card-bg-neutral"
+              >
+                <a href="#" class="heart-btn">
+                  <i class="bi bi-heart"></i>
+                </a>
+                <img
+                  src="/HS_sideProject_zoneBookstore/assets/cat-c770c2be.png"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="d-flex flex-column">
+                  <h4 class="bookTitle">航海王 vol.58</h4>
+                  <a href="#" class="roundedBtn customBtn-primary-200"
+                    >了解更多</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="rounded-titleCard rounded-titleCard-lg card-bg-neutral"
+              >
+                <a href="#" class="heart-btn">
+                  <i class="bi bi-heart"></i>
+                </a>
+                <img
+                  src="/HS_sideProject_zoneBookstore/assets/cat-c770c2be.png"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="d-flex flex-column">
+                  <h4 class="bookTitle">航海王 vol.58</h4>
+                  <a href="#" class="roundedBtn customBtn-primary-200"
+                    >了解更多</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="rounded-titleCard rounded-titleCard-lg card-bg-neutral"
+              >
+                <a href="#" class="heart-btn">
+                  <i class="bi bi-heart"></i>
+                </a>
+                <img
+                  src="/HS_sideProject_zoneBookstore/assets/cat-c770c2be.png"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="d-flex flex-column">
+                  <h4 class="bookTitle">航海王 vol.58</h4>
+                  <a href="#" class="roundedBtn customBtn-primary-200"
+                    >了解更多</a
+                  >
+                </div>
               </div>
             </div>
           </div>
