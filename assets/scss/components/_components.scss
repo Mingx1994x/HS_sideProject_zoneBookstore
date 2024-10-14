@@ -64,7 +64,8 @@
     flex-direction: column;
 
     img {
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
         // height: 300px;
         align-self: center;
 
@@ -74,7 +75,8 @@
         max-width: 375px;
 
         img {
-            width: 200px;
+            width: 100%;
+            max-width: 200px;
             // height: 200px;
         }
     }
