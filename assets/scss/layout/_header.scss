@@ -1,7 +1,8 @@
 .header {
   .navbar {
-    background-color: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
     padding: 16px 0;
+    transition: background-color 1s ease;
 
     @include media-breakpoint-down(sm) {
       padding: 12px 0;
@@ -31,10 +32,13 @@
 // navbar滑動後樣式
 .text-bg-transition-primary-100 {
   background-color: $primary-100 !important;
-  transition: .5s;
 
   a {
     color: $dark !important;
+
+    &:hover {
+      color: $secondary !important;
+    }
   }
 
   .navbar-toggler-icon {
