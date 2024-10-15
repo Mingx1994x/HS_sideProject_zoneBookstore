@@ -20,9 +20,18 @@ const navbar = document.querySelector('#scrollFixNavbar');
 // })
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY >= window.innerHeight) {
-        navbar.classList.add("text-bg-transition-primary-100");
+    let pageName = window.location.toString().split('/');
+    if (pageName[pageName.length - 1].includes('index.html')) {
+        if (window.scrollY >= window.innerHeight) {
+            navbar.classList.add("text-bg-transition-primary-100");
+        } else {
+            navbar.classList.remove("text-bg-transition-primary-100");
+        }
     } else {
-        navbar.classList.remove("text-bg-transition-primary-100");
+        if (window.scrollY > 40) {
+            navbar.style.background = 'linear-gradient(104.36deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2))';
+        } else {
+            navbar.style.background = 'rgba(0, 0, 0,0)';
+        }
     }
 })

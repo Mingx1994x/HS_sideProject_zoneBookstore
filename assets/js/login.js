@@ -9,8 +9,8 @@ const loginBtn = document.querySelector('#loginBtn');
 // register
 const signup = async () => {
     try {
-        const res = await axios.post(`${HexAPI}/users/sign_up`, registerData);
-        // console.log(res);
+        const registerRes = await axios.post(`${HexAPI}/users/sign_up`, registerData);
+        // console.log(registerRes);
         alert(`${registerData.nickname}，恭喜完成註冊嘍！！！\n` + '可以直接登入使用服務嘍')
         window.location.reload();
     } catch (error) {
@@ -22,9 +22,9 @@ const signup = async () => {
 // login
 const login = async () => {
     try {
-        const res = await axios.post(`${HexAPI}/users/sign_in`, loginData);
-        console.log(res);
-        document.cookie = `userToken=${res.data.token}`;
+        const loginRes = await axios.post(`${HexAPI}/users/sign_in`, loginData);
+        console.log(loginRes);
+        document.cookie = `userToken=${loginRes.data.token}`;
         window.location.href = './member.html';
     } catch (error) {
         // console.log(error)

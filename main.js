@@ -12,7 +12,7 @@ import './assets/js/swiper';
 
 // script
 import './assets/js/statusCheck';
-// import './assets/js/navbar';
+import './assets/js/navbar';
 
 
 

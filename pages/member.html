@@ -23,10 +23,17 @@
               </div>
               <div class="flex-grow-1 ms-3">
                 <div class="d-flex justify-content-between align-items-center">
-                  <p class="text-light">Hi,ya_meow 歡迎來到時空書屋</p>
+                  <p class="text-light">
+                    Hi,<span
+                      class="text-secondary-300"
+                      id="memberNickname"
+                    ></span
+                    >歡迎來到時空書屋
+                  </p>
                   <button
                     type="button"
                     class="roundedBtn customBtn-primary-200"
+                    id="logoutBtn"
                   >
                     登出
                   </button>
@@ -223,6 +230,6 @@
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
-    <script src="../assets/js/member.js"></script>
+    <!-- <script src="../assets/js/member.js"></script> -->
   </body>
 </html>
