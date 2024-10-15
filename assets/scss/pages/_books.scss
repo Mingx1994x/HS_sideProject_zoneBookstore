@@ -1,0 +1,16 @@
+.messageContext {
+    display: flex;
+    margin-bottom: map-get($spacers, 3);
+
+    .avatar {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .profile {
+        margin-left: map-get($spacers, 3);
+
+    }
+}
