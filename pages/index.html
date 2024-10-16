@@ -8,6 +8,7 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
+    <!-- banner -->
     <div
       class="banner bg-cover d-flex justify-content-center align-items-center py-5"
       style="background: linear-gradient(104.36deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('../assets/images/banner.png');"
@@ -393,7 +394,7 @@
             <div class="transparentCard-serial">
               <h3 class="serialNumber text-secondary-300">03</h3>
               <img
-                src="../assets/images/drawing/book.png"
+                src="../assets/images/drawing/reading-1.png"
                 alt="book"
                 class="object-fit-cover"
               />
@@ -1069,8 +1070,8 @@
                 <p class="fs-c1 fs-md-4 fw-semibold">步驟 2</p>
                 <div class="py-2 d-flex flex-column">
                   <img
-                    src="../assets/images/drawing/reading-2.png"
-                    alt="reading"
+                    src="../assets/images/drawing/shelf-book.png"
+                    alt="shelf-book"
                     style="height: 150px; width: 150px;"
                     class="mx-auto"
                   />
@@ -1120,7 +1121,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
+            <h5 class="modal-title" id="exampleModalLabel">店長的考驗</h5>
             <button
               type="button"
               class="btn-close"
@@ -1128,16 +1129,65 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">內容</div>
+          <div class="modal-body">
+            <p>
+              在某某書提到的<b class="text-secondary-300">某某森林</b
+              >裡...<br />
+              一旦進到了森林，只要對自己的生命產生一點疑惑，就會部自覺的分裂，不限次數。<br />
+              而人類，總是厭惡看到和自己一模一樣的人，大家都不想當第二個誰，於是看到另一個自己，往往就是想除之後快。<br />
+              所以有傳說，進去永恆森林的人沒有出來的，而有生還出來的，往往也會消失。因為是自相殘殺到全部陣亡，就是生還的部分已經不是完整的自己，沒有完整的記憶，也不是完整的被別人記得。
+            </p>
+            <p class="mt-3 mb-2">提問：這座森林是...?</p>
+            <div class="d-flex justify-content-center">
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio1"
+                  value="option1"
+                />
+                <label class="form-check-label" for="inlineRadio1"
+                  >永恆森林</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio2"
+                  value="option2"
+                />
+                <label class="form-check-label" for="inlineRadio2"
+                  >密語森林</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio3"
+                  value="option3"
+                />
+                <label class="form-check-label" for="inlineRadio3"
+                  >分裂森林</label
+                >
+              </div>
+            </div>
+          </div>
           <div class="modal-footer">
             <button
               type="button"
               class="btn btn-secondary"
               data-bs-dismiss="modal"
             >
-              關閉
+              確認考驗
             </button>
-            <button type="button" class="btn btn-primary">確定</button>
+            <a href="./books.html" role="button" class="btn btn-primary"
+              >尋找線索</a
+            >
           </div>
         </div>
       </div>
