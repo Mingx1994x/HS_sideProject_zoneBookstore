@@ -144,7 +144,8 @@
         let contentBox=document.createElement('div');
         contentBox.classList.add('messageContext');
         let boxAvatar=document.createElement('div');
-        let avatarHtml='<div class="flex-shrink-0"><img src="../assets/images/drawing/cat.png" class="avatar"/></div>';
+        let memberUrl='https://raw.githubusercontent.com/Mingx1994x/HS_sideProject_zoneBookstore/refs/heads/main/assets/images/drawing/cat.png';
+        let avatarHtml=`<div class="flex-shrink-0"><img src=${memberUrl} class="avatar"/></div>`;
         boxAvatar.innerHTML=avatarHtml;
         let boxProfile=document.createElement('div');
         let messageHtml=`<div class="profile flex-grow-1">

@@ -21,7 +21,7 @@ const navbar = document.querySelector('#scrollFixNavbar');
 
 window.addEventListener("scroll", () => {
     let pageName = window.location.toString().split('/');
-    if (pageName[pageName.length - 1].includes('index.html')) {
+    if (pageName[pageName.length - 1].includes('index.html') || pageName[pageName.length - 1].includes('HS_sideProject_zoneBookstore')) {
         if (window.scrollY >= window.innerHeight) {
             navbar.classList.add("text-bg-transition-primary-100");
         } else {
