@@ -1,8 +1,7 @@
 .banner {
   min-height: 100vh;
-  // background: linear-gradient(104.36deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('../images/banner.png');
-  // background-size: cover;
-  // background-position: center;
+  background: linear-gradient(104.36deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('../images/banner.png');
+
 }
 
 .section {
@@ -33,11 +32,28 @@
     }
   }
 
-  .linkMore {
-    color: $light;
+}
 
-    &:hover {
-      color: $secondary;
+.linkMore {
+  color: $light;
+
+  &-primary-900 {
+    color: $primary-900;
+
+    path {
+      fill: $primary-900;
+    }
+  }
+
+  &:hover {
+    color: $secondary;
+  }
+
+  &-primary-900:hover {
+    color: $primary-400;
+
+    path {
+      fill: $primary-400;
     }
   }
 }
