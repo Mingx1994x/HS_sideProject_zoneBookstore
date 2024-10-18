@@ -1,3 +1,10 @@
+.books-info {
+    li {
+        margin-bottom: map-get($spacers, 2);
+    }
+}
+
+
 .messageContext {
     display: flex;
     margin-bottom: map-get($spacers, 3);
@@ -11,6 +18,5 @@
 
     .profile {
         margin-left: map-get($spacers, 3);
-
     }
 }

@@ -120,7 +120,7 @@
 
     &.rounded-titleCard-lg {
         padding: map-get($map: $spacers, $key: 2);
-        row-gap: map-get($map: $spacers, $key: 3);
+        // row-gap: map-get($map: $spacers, $key: 3);
 
         .bookTitle {
             margin-bottom: map-get($spacers, 3);
@@ -129,7 +129,7 @@
 
     &.rounded-titleCard-sm {
         padding: map-get($map: $spacers, $key: 1);
-        row-gap: map-get($map: $spacers, $key: 2);
+        // row-gap: map-get($map: $spacers, $key: 2);
 
         .bookTitle {
             margin-bottom: map-get($spacers, 2);
@@ -320,6 +320,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-wrap: nowrap;
 
     @include media-breakpoint-down(md) {
         // padding: $spacer*.5 $spacer*1.5;
