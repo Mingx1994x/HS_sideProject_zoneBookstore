@@ -79,6 +79,9 @@ checkout();
 const logoutBtn = document.querySelector('#logoutBtn');
 if (logoutBtn) {
     logoutBtn.onclick = () => {
-        logout(memberData.uid);
+        if (confirm(`${memberData.nickname}，確定要登出嗎？`)) logout(memberData.uid);
+
+
+        return
     }
 }

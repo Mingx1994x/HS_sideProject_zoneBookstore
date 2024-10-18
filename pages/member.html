@@ -8,7 +8,7 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <section class="section bg-linear-primary mt-c6">
+    <section class="section bg-linear-primary pt-c6">
       <div class="container">
         <div class="row d-flex justify-content-center">
           <div class="col-md-10 col-lg-8">
@@ -23,13 +23,15 @@
               </div>
               <div class="flex-grow-1 ms-3">
                 <div class="d-flex justify-content-between align-items-center">
-                  <p class="text-light">
-                    Hi,<span
-                      class="text-secondary-300"
-                      id="memberNickname"
-                    ></span
-                    >歡迎來到時空書屋
-                  </p>
+                  <div class="d-flex flex-column">
+                    <p class="text-light">
+                      Hi,<span
+                        class="text-secondary-300"
+                        id="memberNickname"
+                      ></span>
+                    </p>
+                    <p class="text-light">歡迎來到時空書屋</p>
+                  </div>
                   <button
                     type="button"
                     class="roundedBtn customBtn-primary-200"
@@ -38,7 +40,7 @@
                     登出
                   </button>
                 </div>
-                <div class="d-flex">
+                <div class="d-flex mt-4">
                   <p class="text-light me-4">會員點數：60</p>
                   <p class="text-light">押金點數：0</p>
                 </div>
@@ -58,12 +60,12 @@
                 <li class="nav-item" role="presentation">
                   <button
                     class="nav-link active"
-                    id="home-tab"
+                    id="memberInfo-tab"
                     data-bs-toggle="tab"
-                    data-bs-target="#home-tab-pane"
+                    data-bs-target="#memberInfo-tab-pane"
                     type="button"
                     role="tab"
-                    aria-controls="home-tab-pane"
+                    aria-controls="memberInfo-tab-pane"
                     aria-selected="true"
                   >
                     會員資料
@@ -79,6 +81,7 @@
                     role="tab"
                     aria-controls="favorite-tab-pane"
                     aria-selected="false"
+                    disabled
                   >
                     關注收藏
                   </button>
@@ -93,6 +96,7 @@
                     role="tab"
                     aria-controls="profile-tab-pane"
                     aria-selected="false"
+                    disabled
                   >
                     我的書攤
                   </button>
@@ -107,20 +111,22 @@
                     role="tab"
                     aria-controls="contact-tab-pane"
                     aria-selected="false"
+                    disabled
                   >
                     聯絡書店
                   </button>
                 </li>
               </ul>
+              <!-- tabPane -->
               <div class="tab-content" id="myTabContent">
                 <div
-                  class="tab-pane fade show active"
-                  id="home-tab-pane"
+                  class="tab-pane fade show active pt-4"
+                  id="memberInfo-tab-pane"
                   role="tabpanel"
-                  aria-labelledby="home-tab"
+                  aria-labelledby="memberInfo-tab"
                   tabindex="0"
                 >
-                  <h2>會員資料</h2>
+                  <h2 class="ms-3">會員資料</h2>
                   <div class="row d-flex justify-content-center">
                     <div class="col-8">
                       <div class="mb-4">
@@ -136,7 +142,7 @@
                       </div>
                       <div class="mb-4">
                         <label for="userNickname" class="form-label mb-1"
-                          >userNickname</label
+                          >暱稱</label
                         >
                         <input
                           type="text"
@@ -147,13 +153,13 @@
                       </div>
                       <div class="mb-4">
                         <label for="userEmail" class="form-label mb-1"
-                          >Email</label
+                          >信箱</label
                         >
                         <input
                           type="email"
                           class="form-control"
                           id="userEmail"
-                          value="meowmewomeow@hex.com"
+                          value="meow999@mail.com"
                           readonly
                         />
                       </div>
@@ -184,6 +190,8 @@
                         <button
                           type="button"
                           class="roundedBtn customBtn-primary-200"
+                          data-bs-toggle="modal"
+                          data-bs-target="#editMemberInfo"
                         >
                           編輯
                         </button>
