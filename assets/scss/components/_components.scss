@@ -165,9 +165,13 @@
     display: flex;
     flex-direction: column;
 
-    img {
+    .img-square-lg {
         width: 300px;
         align-self: center;
+    }
+
+    .img-square-md {
+        width: 200px;
     }
 
     .context {
@@ -223,7 +227,7 @@
         width: 375px;
         padding: map-get($map: $spacers, $key: 3) 0;
 
-        img {
+        .img-square-lg {
             width: 200px;
         }
     }
@@ -256,9 +260,12 @@
         }
     }
 
-    img {
+    .img-square-md {
         width: 200px;
-        height: 200px;
+
+        @include media-breakpoint-down(md) {
+            width: 150px;
+        }
     }
 
     &>.cardBody {
