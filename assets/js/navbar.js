@@ -21,11 +21,13 @@ const navbar = document.querySelector('#scrollFixNavbar');
 
 window.addEventListener("scroll", () => {
     let pageName = window.location.toString().split('/');
-    if (pageName[pageName.length - 1].includes('index.html') || pageName[pageName.length - 1].includes('HS_sideProject_zoneBookstore')) {
+    if (pageName[pageName.length - 1].includes('index.html') || pageName[pageName.length - 2].includes('HS_sideProject_zoneBookstore')) {
         if (window.scrollY >= window.innerHeight) {
             navbar.classList.add("text-bg-transition-primary-100");
+            navbar.style.boxShadow = "-1px 12px 8px 0px rgba(186, 186, 186,0.2)";
         } else {
             navbar.classList.remove("text-bg-transition-primary-100");
+            navbar.style.boxShadow = "0 0 0 0 rgba(186, 186, 186, 0.2)";
         }
     } else {
         if (window.scrollY > 40) {
