@@ -15,6 +15,7 @@ const checkout = async () => {
         // console.log(res);
         memberData.nickname = res.data.nickname;
         memberData.uid = res.data.uid;
+        localStorage.setItem('nickName', `${memberData.nickname}`);
         writeData();
     } catch (error) {
         // console.log(error);
@@ -62,14 +63,26 @@ const writeData = () => {
     let pageName = window.location.toString().split('/');
     if (pageName[pageName.length - 1].includes('member.html')) {
         // let memberInfo = JSON.parse(localStorage.getItem('member'));
-        const userID = document.querySelector('#userID');
+        // const userID = document.querySelector('#userID');
         const userNickname = document.querySelector('#userNickname');
         const memberNickname = document.querySelector('#memberNickname');
-
-        userID.value = memberData.uid;
+        const editNickname = document.querySelector('#editNickname');
+        const userEmail = document.querySelector('#userEmail');
+        const editEmail = document.querySelector('#editEmail');
+        const userPassword = document.querySelector('#userPassword');
+        const editPassword = document.querySelector('#editPassword');
+        const chkEditPassword = document.querySelector('#chkEditPassword');
+        const memberInfo = JSON.parse(localStorage.getItem('member'));
+        console.log(memberInfo);
+        // userID.value = memberData.uid;
         userNickname.value = memberData.nickname;
+        editNickname.value = memberData.nickname;
         memberNickname.textContent = memberData.nickname;
-        userID.value = memberData.uid;
+        userEmail.value = memberInfo.email;
+        editEmail.value = memberInfo.email;
+        userPassword.value = memberInfo.password;
+        editPassword.value = memberInfo.password;
+        chkEditPassword.value = memberInfo.password;
     }
 }
 

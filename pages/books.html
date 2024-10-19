@@ -141,7 +141,7 @@
       const msgSubmit=document.querySelector('#messageBtn');
       const msgBoard=document.querySelector('#messageBoard');
       let message;
-
+      let memberNickname=localStorage.getItem('nickName');
       const addMessage=()=>{
         let contentBox=document.createElement('div');
         contentBox.classList.add('messageContext');
@@ -151,7 +151,7 @@
         boxAvatar.innerHTML=avatarHtml;
         let boxProfile=document.createElement('div');
         let messageHtml=`<div class="profile flex-grow-1">
-                  <p>yameow</p>
+                  <p>${memberNickname}</p>
                   <p>${message}</p>
                   <p>剛剛</p>
                 </div>`
@@ -164,7 +164,13 @@
 
       msgSubmit.addEventListener('click',()=>{
         message=msgContext.value;
-        if(!message) return;
+        if(!message){
+          return;
+        } else if(!memberNickname){
+          alert('請先登入唷！！！');
+          msgContext.value='';
+          return
+        }
         // console.log(message);
         // console.log(addMessage());
         msgContext.value='';

@@ -23,8 +23,9 @@ const signup = async () => {
 const login = async () => {
     try {
         const loginRes = await axios.post(`${HexAPI}/users/sign_in`, loginData);
-        console.log(loginRes);
+        // console.log(loginRes);
         document.cookie = `userToken=${loginRes.data.token}`;
+        localStorage.setItem('member', JSON.stringify(loginData));
         window.location.href = './member.html';
     } catch (error) {
         // console.log(error)

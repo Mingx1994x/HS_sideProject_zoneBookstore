@@ -129,7 +129,7 @@
                   <h2 class="ms-3">會員資料</h2>
                   <div class="row d-flex justify-content-center">
                     <div class="col-8">
-                      <div class="mb-4">
+                      <!-- <div class="mb-4">
                         <label for="userID" class="form-label mb-1"
                           >userID</label
                         >
@@ -139,7 +139,7 @@
                           id="userID"
                           readonly
                         />
-                      </div>
+                      </div> -->
                       <div class="mb-4">
                         <label for="userNickname" class="form-label mb-1"
                           >暱稱</label
@@ -159,7 +159,6 @@
                           type="email"
                           class="form-control"
                           id="userEmail"
-                          value="meow999@mail.com"
                           readonly
                         />
                       </div>
@@ -176,7 +175,7 @@
                       </div> -->
                       <div class="mb-4">
                         <label for="userPassword" class="form-label mb-1"
-                          >Password</label
+                          >密碼</label
                         >
                         <input
                           type="password"
@@ -235,6 +234,76 @@
         </div>
       </div>
     </section>
+
+    <!-- Modal 元件 -->
+    <div
+      class="modal fade"
+      id="editMemberInfo"
+      tabindex="-1"
+      aria-labelledby="editMemberInfoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editMemberInfoLabel">編輯資料</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex flex-column">
+              <div class="mb-3">
+                <label for="editNickname" class="form-label mb-1">暱稱</label>
+                <input type="text" class="form-control" id="editNickname" />
+              </div>
+              <div class="mb-3">
+                <label for="editEmail" class="form-label mb-1">信箱</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="editEmail"
+                  placeholder="請輸入信箱"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="editPassword" class="form-label mb-1">密碼</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="editPassword"
+                  value="********"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="chkEditPassword" class="form-label mb-1"
+                  >密碼確認</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="chkEditPassword"
+                  value="********"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary">確認修改</button>
+            <a
+              href="./books.html"
+              role="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+              >取消修改</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
