@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>books</title>
-    <script type="module" crossorigin src="/HS_sideProject_zoneBookstore/assets/main-44952dc3.js"></script>
+    <script type="module" crossorigin src="/HS_sideProject_zoneBookstore/assets/main-ec63c395.js"></script>
     <link rel="stylesheet" href="/HS_sideProject_zoneBookstore/assets/main-59f4fddb.css">
   </head>
   <body>
@@ -225,7 +225,7 @@
       const msgSubmit=document.querySelector('#messageBtn');
       const msgBoard=document.querySelector('#messageBoard');
       let message;
-
+      let memberNickname=localStorage.getItem('nickName');
       const addMessage=()=>{
         let contentBox=document.createElement('div');
         contentBox.classList.add('messageContext');
@@ -235,7 +235,7 @@
         boxAvatar.innerHTML=avatarHtml;
         let boxProfile=document.createElement('div');
         let messageHtml=`<div class="profile flex-grow-1">
-                  <p>yameow</p>
+                  <p>${memberNickname}</p>
                   <p>${message}</p>
                   <p>剛剛</p>
                 </div>`
@@ -248,7 +248,13 @@
 
       msgSubmit.addEventListener('click',()=>{
         message=msgContext.value;
-        if(!message) return;
+        if(!message){
+          return;
+        } else if(!memberNickname){
+          alert('請先登入唷！！！');
+          msgContext.value='';
+          return
+        }
         // console.log(message);
         // console.log(addMessage());
         msgContext.value='';
