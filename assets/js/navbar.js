@@ -21,7 +21,7 @@ const navbar = document.querySelector('#scrollFixNavbar');
 
 window.addEventListener("scroll", () => {
     let pageName = window.location.toString().split('/');
-    if (pageName[pageName.length - 1].includes('index.html') || pageName[pageName.length - 1] == null) {
+    if (pageName[pageName.length - 1].includes('index.html') || pageName[pageName.length - 1].includes('register.html') || pageName[pageName.length - 1] == '') {
         if (window.scrollY >= window.innerHeight) {
             navbar.classList.add("text-bg-transition-primary-100");
             navbar.style.boxShadow = "-1px 12px 8px 0px rgba(186, 186, 186,0.2)";
@@ -31,9 +31,13 @@ window.addEventListener("scroll", () => {
         }
     } else {
         if (window.scrollY > 40) {
-            navbar.style.background = 'linear-gradient(104.36deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2))';
+            // navbar.style.background = 'linear-gradient(104.36deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2))';
+            navbar.classList.add("text-bg-transition-primary-100");
+            navbar.style.boxShadow = "-1px 12px 8px 0px rgba(186, 186, 186,0.2)";
         } else {
-            navbar.style.background = 'rgba(0, 0, 0,0)';
+            // navbar.style.background = 'rgba(0, 0, 0,0)';
+            navbar.classList.remove("text-bg-transition-primary-100");
+            navbar.style.boxShadow = "0 0 0 0 rgba(186, 186, 186, 0.2)";
         }
     }
 })
